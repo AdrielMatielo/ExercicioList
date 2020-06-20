@@ -45,19 +45,19 @@ public class Program {
 		int id = sc.nextInt();
 		
 		//SEARCH WITH LAMBDA EXPRESSION
-			Employee pos = list.stream().filter(x ->x.getId() == id).findFirst().orElse(null);
+			//Employee pos = list.stream().filter(x ->x.getId() == id).findFirst().orElse(null);
 		
 		//SEARCH WITHOUT LAMBDA EXPRESSION
-			//Integer pos = position(list, id);
+			Integer pos = position(list, id);
 		
 		if (pos == null) {
 			System.out.println("This ID dos not exist!");
 		}else {
 			System.out.print("Enter the percentage: ");
 			//SEARCH WITH LAMBDA EXPRESSION
-			pos.increaseSalary(sc.nextDouble());
+			//pos.increaseSalary(sc.nextDouble());
 			//SEARCH WITHOUT LAMBDA EXPRESSION
-			//list.get(pos).increaseSalary(sc.nextDouble());
+			list.get(pos).increaseSalary(sc.nextDouble());
 		}
 		
 		//PRINTING DATA:
